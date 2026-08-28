@@ -3,6 +3,14 @@ class Bankaccount{
     deposite(ammount){
         this.#balance+=ammount;
     }
+    withdraw(ammount){
+        if(ammount >= this.#balance){ 
+            this.#balance -= ammount;
+            console.log("withdraw ammount successfully!");
+        }else{
+            console.log("Insufficient balance!");
+        }
+    }
     getBalance(){
         return this.#balance;
     }
